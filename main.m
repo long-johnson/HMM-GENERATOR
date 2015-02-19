@@ -1,20 +1,20 @@
 NumInit=5;
-T=100;
+T=500;
 K=100;
 % 
 [N,Z,M,PI1,A1,MU1,SIG1,TAU1,PI11,A11,MU11,SIG11,TAU11]=get_init_params(101,NumInit);
 [Ok1,Q1]=gen_signal(PI1,A1,TAU1,MU1,SIG1,T,K,Z,N);
-write_params(Ok1,PI1,A1,TAU1,MU1,SIG1,PI11,A11,TAU11,MU11,SIG11,K,T,Z,N,M,NumInit,'..\..\HMM\HMM\model1\');
+write_params(Ok1,PI1,A1,TAU1,MU1,SIG1,PI11,A11,TAU11,MU11,SIG11,K,T,Z,N,M,NumInit,'model1\');
 
 [N,Z,M,PI2,A2,MU2,SIG2,TAU2,PI21,A21,MU21,SIG21,TAU21]=get_init_params(102,NumInit);
 [Ok2,Q2]=gen_signal(PI2,A2,TAU2,MU2,SIG2,T,K,Z,N);
-write_params(Ok2,PI2,A2,TAU2,MU2,SIG2,PI21,A21,TAU21,MU21,SIG21,K,T,Z,N,M,NumInit,'..\..\HMM\HMM\model2\');
+write_params(Ok2,PI2,A2,TAU2,MU2,SIG2,PI21,A21,TAU21,MU21,SIG21,K,T,Z,N,M,NumInit,'model2\');
 
 
 [Otest1,Q11]=gen_signal(PI1,A1,TAU1,MU1,SIG1,T,K,Z,N);
-write_O(Otest1,K,T,Z,'..\..\HMM\HMM\model1\Otest1.txt');
+write_O(Otest1,K,T,Z,'model1\Otest1.txt');
 [Otest2,Q21]=gen_signal(PI2,A2,TAU2,MU2,SIG2,T,K,Z,N);
-write_O(Otest2,K,T,Z,'..\..\HMM\HMM\model1\Otest2.txt');
+write_O(Otest2,K,T,Z,'model1\Otest2.txt');
 
 % [Otest1,Q12]=gen_signal(PI1,A1,TAU1,MU1,SIG1,T,K,Z,N);
 % write_O(Otest1,K,T,Z,'..\..\HMM\HMM\model2\Otest1.txt');
